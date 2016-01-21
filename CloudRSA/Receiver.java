@@ -1,13 +1,12 @@
+package CloudRSA;
+
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Created by Pedro Faria on 19-Nov-15.
- */
 public class Receiver {
 	public Receiver() {
-		// TODO Auto-generated constructor stub
+		System.out.println("Receiver");
 	}
 
 	public String receiveFile(List<String> fileList){

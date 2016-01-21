@@ -27,7 +27,7 @@ class MD5 {
     private static final int INIT_B = (int) 0xEFCDAB89L;
     private static final int INIT_C = (int) 0x98BADCFEL;
     private static final int INIT_D = 0x10325476;
-    private static final String testFileName = "./src/testFiles/testFile.jpg";
+    private static final String testFileName = "./src/MD5/testFiles/testFile.jpg";
 
     private static final int[] SHIFT_AMTS = {
             7, 12, 17, 22,
@@ -147,7 +147,7 @@ class MD5 {
         Path path = Paths.get(testFileName);
         byte[] data = Files.readAllBytes(path);
         //FileInputStream fis = new FileInputStream(new File("testFile.ppt"));
-        System.out.println("0x" + toHexString(MD5(data)) + " <==> \"" + "testFile.ppt" + "\"");
+        System.out.println("0x" + toHexString(MD5(data)) + " <==> \"" + testFileName + "\"");
 
         System.out.println("\n\nNOW HASHING 2 DIFFERENT HEX STRINGS WITH COLLISION...");
         String hexCollision1 = "4dc968ff0ee35c209572d4777b721587d36fa7b21bdc56b74a3dc0783e7b9518afbfa200a8284bf36e8e4b55b35f427593d849676da0d1555d8360fb5f07fea2";
